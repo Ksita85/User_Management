@@ -1,0 +1,50 @@
+<div class="col-md">
+    <div class="row">
+        <div class="col-6">
+            <h1>Users</h1>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <a href="/adduser" type="button" class="btn btn-dark align-self-center"><span><i class="bi bi-person-plus-fill"></i></span> Add User</a>
+        </div>
+    </div>
+    {{#if alert}}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert"> 
+            {{alert}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+        {{#if removedUser}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert"> 
+            {{removedUser}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+    <table class="my-5 table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th class="text-center" scope="col">Action</th>
+            </tr>
+        </thead>
+    <tbody> 
+        {{#each rows}}
+        <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.first_name}}</td>
+            <td>{{this.last_name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.phone}}</td>
+            <td class="text-center">
+                <a href="/viewuser/{{this.id}}" type="button" class="px-2 btn btn-sm btn-secondary"><i class="bi bi-eye fs-5"></i></a>
+                <a href="/edituser/{{this.id}}" type="button" class="px-2 btn btn-sm btn-dark"><i class="bi bi-pencil fs-5"></i></a>
+                <a href="/{{this.id}}" type="button" class="px-2 btn btn-sm btn-danger"><i class="bi bi-x fs-5"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>

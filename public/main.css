@@ -1,0 +1,28 @@
+body{
+    background-color: #0e0e0e;
+    color:#fff;
+}
+
+.btn-search{
+    background-color: #4e4e4e;
+    padding: 6px;
+    margin-left: -4px;
+    border:none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btn-search:hover{
+    background-color:#646464;
+}
+.pattern{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0e0e0e;
+    opacity: 0.8;
+    background-image:  linear-gradient(135deg, rgb(27, 27, 27) 25%, transparent 25%), linear-gradient(225deg, rgb(36, 35, 35) 25%, transparent 25%), linear-gradient(45deg, rgb(44, 42, 42) 25%, transparent 25%), linear-gradient(315deg, rgb(31, 30, 30) 25%, #0e0e0e 25%);
+    background-position:  6px 0, 6px 0, 0 0, 0 0;
+    background-size: 12px 12px;
+    background-repeat: repeat;
+}

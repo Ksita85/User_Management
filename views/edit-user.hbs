@@ -1,0 +1,14 @@
+<h1><span><i class="bi bi-person-plus-fill"></i></span>Edit User</h1>
+<div class="row d-flex mt-5 mx-3 px-5">
+    {{#if alert}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert"> 
+            {{alert}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+    {{#each rows}}
+        <form class="justify-content-center form-floating" action="/edituser/{{this.id}}" method="POST" novalidate>
+            {{> user-form}}
+        </form>
+    {{/each}}
+</div>
